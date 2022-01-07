@@ -35,11 +35,8 @@ class MyTestCase(unittest.TestCase):
         readmeText = self.driver.find_element(By.ID, "readme")
         threeHundredChars = readmeText.text
         print("300 characters")
-        print("starts here: "threeHundredChars[0:299])
+        print(threeHundredChars[0:299])
         time.sleep(10)
-
-
-
 
     def tearDown(self):
         self.driver.quit()
