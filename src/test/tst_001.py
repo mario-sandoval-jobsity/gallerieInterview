@@ -10,7 +10,7 @@ class MyTestCase(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome()
         self.driver.maximize_window()
-        self.driver.implicitly_wait(15)
+        self.driver.implicitly_wait(10)
 
     def test_searchProject(self):
         self.driver.get("http://github.com")
