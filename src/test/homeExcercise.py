@@ -5,7 +5,6 @@ from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 
-
 class MyTestCase(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome()
@@ -34,13 +33,10 @@ class MyTestCase(unittest.TestCase):
         linkRepositoryFound.click()
         readmeText = self.driver.find_element(By.ID, "readme")
         threeHundredChars = readmeText.text
-        print("300 characters")
-        print(threeHundredChars[0:299])
-        time.sleep(10)
+        print(f"\nReadme info:\n {threeHundredChars[0:299]}")
 
     def tearDown(self):
         self.driver.quit()
-
 
 if __name__ == '__main__':
     unittest.main()
